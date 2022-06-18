@@ -16,7 +16,6 @@ public class CourseCodeConstraintValidator implements ConstraintValidator<Course
 
     @Override
     public boolean isValid(String theCode, ConstraintValidatorContext constraintValidatorContext) {
-
         if (theCode != null){
            for (String prefix: this.coursePrefix){
                if (prefix.startsWith(theCode)){
@@ -24,7 +23,6 @@ public class CourseCodeConstraintValidator implements ConstraintValidator<Course
                }
            }
         }
-
         return false;
     }
 }

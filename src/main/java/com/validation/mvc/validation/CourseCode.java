@@ -12,11 +12,11 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface  CourseCode {
 
-    public String[] value() default  {"LUV"};
+    String[] value() default  {"LUV"}; //public modifier is redundant here for all!
 
-    public String message() default "must start with LUV";
+    String message() default "must start with LUV";
 
-    public Class<?>[] groups() default {};
+    Class<?>[] groups() default {};
 
-    public Class<? extends Payload>[] payload() default {};
+    Class<? extends Payload>[] payload() default {};
 }
